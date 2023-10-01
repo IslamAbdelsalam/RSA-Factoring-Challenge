@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from sys import argv
+from math import sqrt
 
 if len(argv) < 2:
     quit()
@@ -8,10 +9,9 @@ file = open(argv[1])
 
 for line in file:
     
-    number = float(line)
-    number = number ** 0.5
-    number = int(number)
-    for n in range(2, number):
+    number = int(line)
+    lol = int(sqrt(number))
+    for n in range(2, lol+1):
         if number % n == 0:
             print(f"{number}={number//n}*{n}")
             break
