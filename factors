@@ -7,7 +7,10 @@ if len(argv) < 2:
 file = open(argv[1])
 
 for line in file:
-    number = int(line)
+    
+    number = float(line)
+    number = number ** 0.5
+    number = int(number)
     for n in range(2, number):
         if number % n == 0:
             print(f"{number}={number//n}*{n}")
